@@ -127,14 +127,15 @@ width:100px;
 .add-button {
   background-color: var(--button-primary);
   border: none;
-  border-radius: 50%;
+  border-radius: 5%;
   color: var(--ghost-white);
   cursor: pointer;
-  font-size: 16px;
-  height: 20px;
-  margin: 4px 2px;
+  font-size: 18px;
+  font-family:'Patrick Hand',cursive;
+  height: 30px;
+  width: auto;
+  margin: auto;
   text-align: center;
-  width: 20px;
 }
 
 
