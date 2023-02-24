@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap";
 
+
 :root {
 --antique-white:#FFEEDD;
 --apricot:#FFD8BE;
@@ -7,7 +8,7 @@
 --button-primary:#766ac3;
 --button-secondary:#ccccff;
 --ghost-white:#F8F7FF;
---h4:#40319f
+--h4:#40319f;
 }
 
 * {
@@ -24,7 +25,8 @@ font-size:16px;
 justify-content:center;
 margin:50px;
 min-height:100vh;
-padding:0
+padding:0;
+touch-action: manipulation;
 }
 
 h1,h2 {
@@ -102,7 +104,7 @@ padding:20px
 .box-container {
 display:grid;
 gap:10px;
-grid-template-columns:repeat(3,1fr)
+grid-template-columns:repeat(1,1fr)
 }
 
 .box {
@@ -119,21 +121,22 @@ padding:10px;
 text-align:left;
 text-align:top;
 vertical-align:top;
-width:100px
+width:100px;
 }
 
 .add-button {
-background-color:var(--button-primary);
-border:none;
-border-radius:50%;
-color:var(--ghost-white);
-cursor:pointer;
-font-size:16px;
-height:20px px;
-margin:4px 2px;
-text-align:center;
-width:20px px
+  background-color: var(--button-primary);
+  border: none;
+  border-radius: 50%;
+  color: var(--ghost-white);
+  cursor: pointer;
+  font-size: 16px;
+  height: 20px;
+  margin: 4px 2px;
+  text-align: center;
+  width: 20px;
 }
+
 
 .add-button:hover {
 background-color:var(--button-secondary)
