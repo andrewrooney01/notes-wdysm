@@ -153,7 +153,7 @@ input[type="answer"] {
   color: var(--black);
   cursor: pointer;
   font-family: 'Patrick Hand', cursive;
-  font-size: 16px;
+  font-size: 32px;
   height: 125px;
   margin: 10px;
   padding: 10px;
@@ -172,7 +172,7 @@ textarea {
   color: var(--black);
   cursor: pointer;
   font-family: 'Patrick Hand', cursive;
-  font-size: 16px;
+  font-size: 32px;
   height: 125px;
   margin: 10px;
   padding: 10px;
@@ -192,9 +192,10 @@ textarea {
   border-style:outset;
   box-sizing:border-box;
   display:inline-block;
-  font-size:16px;
+  font-size:28px;
   margin:10px;
   max-width: 100%;
+  min-height: 100px;
   padding:10px;
   text-align:left;
   text-align:top;
