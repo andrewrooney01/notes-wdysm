@@ -13,7 +13,7 @@ const clearButton = document.querySelector("#clear-button");
 // Get the existing boxes from local storage
 let boxes = JSON.parse(localStorage.getItem("boxes")) || [];
 
-// Define the getRandomColor function outside of renderBoxes
+// Define the getRandomColor function  outside of renderBoxes
 function getRandomColor() {
   const randNum = Math.floor(Math.random() * 5) + 1; // Generate a random number between 1 and 5
   return `var(--rand-${randNum})`; // Use the rand-N notation to get a random color from CSS variables
