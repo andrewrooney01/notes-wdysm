@@ -1,4 +1,4 @@
-## how to push live updates
+## how to  push live updates
 ### Creates a new branch based on your current branch
 ## git checkout -b 
 ### git add .
