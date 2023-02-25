@@ -2,13 +2,18 @@
 
 
 :root {
---antique-white:#FFEEDD;
---apricot:#FFD8BE;
+--note:#FFEEDD;
+--background:#FFD8BE;
 --black:#0e0e0e;
 --button-primary:#766ac3;
 --button-secondary:#ccccff;
 --ghost-white:#F8F7FF;
---h4:#40319f;
+--question:#40319f;
+--rand-1: #bed8ff;
+--rand-2: #f2beff;
+--rand-3: #fff9be;
+--rand-4: #cbffbe;
+--rand-5: #d2beff;
 }
 
 * {
@@ -17,7 +22,7 @@ box-sizing:border-box;
 
 body {
 align-items:center;
-background-color:var(--apricot);
+background-color:var(--background);
 display:flex;
 flex-direction:column;
 font-family:'Patrick Hand',cursive;
@@ -66,7 +71,7 @@ width:100%
 }
 
 h4 {
-color:var(--h4);
+color:var(--question);
 font-size:32px;
 letter-spacing:2px;
 margin-bottom:20px;
@@ -101,29 +106,6 @@ max-width:100%;
 padding:20px
 }
 
-.box-container {
-display:grid;
-gap:10px;
-grid-template-columns:repeat(1,1fr)
-}
-
-.box {
-background-color:var(--antique-white);
-border-radius:5%;
-border-style:outset;
-box-sizing:border-box;
-display:inline-block;
-font-size:16px;
-height:100px;
-inline-size:90px;
-margin:10px;
-padding:10px;
-text-align:left;
-text-align:top;
-vertical-align:top;
-width:100px;
-}
-
 .add-button {
   background-color: var(--button-primary);
   border: none;
@@ -134,7 +116,7 @@ width:100px;
   font-family:'Patrick Hand',cursive;
   height: 30px;
   width: auto;
-  margin: auto;
+  margin: 10xpx 20px;
   text-align: center;
 }
 
@@ -151,7 +133,7 @@ color:var(--ghost-white);
 cursor:pointer;
 display:block;
 font-family:'Patrick Hand',cursive;
-font-size:16px;
+font-size:18px;
 height:20%;
 margin:auto;
 margin-top:5px;
@@ -164,27 +146,68 @@ background-color:red
 }
 
 input[type="answer"] {
-background-color:var(--antique-white);
-border:.5px var(--black);
-border-radius:5px;
-box-sizing:border-box;
-color:var(--black);
-cursor:pointer;
-font-family:'Patrick Hand',cursive;
-font-size:16px;
-font-size:16px;
-height:125px;
-margin:10px;
-max-width:80%;
-padding:10px;
-width:125px
+  background-color: var(--note);
+  border: .5px var(--black);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: var(--black);
+  cursor: pointer;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 16px;
+  height: 125px;
+  margin: 10px;
+  padding: 10px;
+  /* fix for the issue */
+  white-space: pre-wrap;
+  /* added the following two lines to limit the input to 500 characters */
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+textarea {
+  background-color: var(--note);
+  border: .5px var(--black);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: var(--black);
+  cursor: pointer;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 16px;
+  height: 125px;
+  margin: 10px;
+  padding: 10px;
+  /* fix for the issue */
+  white-space: pre-wrap;
+  /* added the following two lines to limit the input to 500 characters */
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+
+
+
+.box {
+  background-color: var(--rand-1);
+  border-radius:5%;
+  border-style:outset;
+  box-sizing:border-box;
+  display:inline-block;
+  font-size:16px;
+  margin:10px;
+  max-width: 100%;
+  padding:10px;
+  text-align:left;
+  text-align:top;
+  vertical-align:top;
 }
 
 .box-container {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(1, 1fr); /* default to one column for small screens */
+  display:grid;
+  gap:10px;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: max-content;
 }
+
 
 @media screen and (min-width: 480px) {
   .box-container {
